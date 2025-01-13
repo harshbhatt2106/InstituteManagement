@@ -1,0 +1,314 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@500&display=swap');
+*, *::after, *::before {
+    margin: 0 0 61px 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    background-color: #ecf0f3;
+    color: #a0a5a8;
+}
+
+.maincontainer {
+    display: flex;
+    position: relative;
+    width: 1448px;
+    min-width: 1000px;
+    min-height: 600px;
+    height: 1268px;
+    padding: 25px;
+    background-color: #ecf0f3;
+    box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    top: 23px;
+    left: 0px;
+}
+
+.onecontainer img {
+    width: 525px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    bottom: 25px;
+    right: 100px;
+}
+
+.onecontainer {
+    border: 2px solid black;
+    height: 550px;
+    width: 400px;
+}
+
+.secondcontainer {
+    position: relative;
+    left: 150px;
+    height: 550px;
+    width: 400px;
+}
+
+    .secondcontainer a:hover {
+        color: blue;
+    }
+
+
+.button {
+    top: 100px;
+    align-items: center;
+    appearance: none;
+    background-color: #24a0ed;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    right: 20px;
+    width: 200px;
+}
+
+    .button:hover {
+        background: #F6F9FE;
+        color: #174ea6;
+    }
+
+    .button:active {
+        box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+        outline: none;
+    }
+
+    .button:focus {
+        outline: none;
+        border: 2px solid #4285f4;
+    }
+
+    .button:not(:disabled) {
+        box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+        .button:not(:disabled):hover {
+            box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+        }
+
+        .button:not(:disabled):focus {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+        }
+
+        .button:not(:disabled):active {
+            box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+        }
+
+    .button:disabled {
+        box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+body {
+    background-color: whitesmoke;
+    height: 550px;
+    position: relative;
+}
+
+.onecontainer img {
+    width: 555px;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    bottom: 70px;
+    right: 50px;
+}
+
+
+.secondcontainer h1 {
+    align-items: center;
+    font-size: 50px;
+    position: relative;
+    top: 85px;
+    left: 70px;
+    color: grey;
+}
+
+.secondcontainer a {
+    position: relative;
+    top: 270px;
+    left: 100px;
+    font-size: large;
+    color: grey;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.input-container {
+    position: relative;
+    top: 90px;
+    right: 20px;
+    max-width: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: black;
+}
+
+    .input-container .focus-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    .input-container .input {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        border: 0;
+        font-family: inherit;
+        padding: 10px 10px 0 12px;
+        height: 56px;
+        font-size: 23px;
+        font-weight: 400;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+        color: #000;
+        transition: all 0.15s ease;
+        margin-bottom: 25px;
+    }
+
+        .input-container .input:hover {
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .input-container .input:not(:placeholder-shown) + .label {
+            color: rgba(0, 0, 0, 0.5);
+            transform: translate3d(0, -30px, 0) scale(0.75);
+        }
+
+        .input-container .input:focus {
+            outline: none;
+            box-shadow: inset 0 -2px 0 #0077FF;
+        }
+
+            .input-container .input:focus + .label {
+                color: #0077FF;
+                transform: translate3d(0, -30px, 0) scale(0.75);
+            }
+
+                .input-container .input:focus + .label + .focus-bg {
+                    transform: scaleX(1);
+                    transition: all 0.1s ease;
+                }
+
+    .input-container .label {
+        position: absolute;
+        width: 400px;
+        bottom: 20px;
+        left: 12px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+        transform-origin: 0 0;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease;
+        pointer-events: none;
+        font-family: 'Playfair Display', serif;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .input-container .label2 {
+        position: absolute;
+        width: 400px;
+        bottom: 40px;
+        left: 12px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+        transform-origin: 0 0;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease;
+        pointer-events: none;
+    }
+
+    .input-container .input:not(:placeholder-shown) + .label2 {
+        color: rgba(0, 0, 0, 0.5);
+        transform: translate3d(0, -30px, 0) scale(0.75);
+    }
+
+    .input-container .input:focus {
+        outline: none;
+        box-shadow: inset 0 -2px 0 #0077FF;
+    }
+
+        .input-container .input:focus + .label2 {
+            color: #0077FF;
+            transform: translate3d(0, -30px, 0) scale(0.75);
+        }
+
+            .input-container .input:focus + .label2 + .focus-bg {
+                transform: scaleX(1);
+                transition: all 0.1s ease;
+            }
+
+.secondcontainer .Validornot {
+    position: relative;
+    font-size: 20px;
+    right: 10px;
+    top: 60px;
+    height: 5px;
+    right: 200px;
+}
+
+.maincontainer {
+    position: relative;
+    top: 100px;
+    height: 600px;
+    width: 100px;
+}
+
+.ForgetPassword {
+    color: deepskyblue;
+    height: 25px;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    height: 40px;
+    top: 530px;
+    left: 10px;
+}
+
+    .ForgetPassword:hover {
+        color: blue;
+    }

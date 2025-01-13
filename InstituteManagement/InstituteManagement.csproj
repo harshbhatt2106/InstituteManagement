@@ -1,0 +1,421 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73B80C36-86BE-4312-9E90-A573C29D3219}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InstituteManagement</RootNamespace>
+    <AssemblyName>InstituteManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44371</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Spire.Pdf, Version=8.10.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=7.10.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.PdfViewer.Asp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=7.10.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.PdfViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Usermanagement\AddClass.aspx" />
+    <Content Include="Usermanagement\AddUser.aspx" />
+    <Content Include="Attendance\EditAttendance.aspx" />
+    <Content Include="Attendance\TakeAttendance.aspx" />
+    <Content Include="Attendance\ViewAttendnace.aspx" />
+    <Content Include="Attendance\ViewMyAttendance.aspx" />
+    <Content Include="Css\Control.css" />
+    <Content Include="Css\ForgotPassword.css" />
+    <Content Include="Css\KnowledgeRepositoryMaster.css" />
+    <Content Include="Css\Login.css" />
+    <Content Include="Css\TakeAttendance.css" />
+    <Content Include="Home.aspx" />
+    <Content Include="Image\AddCategory.png" />
+    <Content Include="Image\Aettendence.png" />
+    <Content Include="Image\forgetpasswordLogo.jpg" />
+    <Content Include="Image\Knowlagerepository.png" />
+    <Content Include="Image\Library.png" />
+    <Content Include="Image\loginVactores.jpg" />
+    <Content Include="Image\logout.png" />
+    <Content Include="Image\mail.png" />
+    <Content Include="Image\onlineExamination.png" />
+    <Content Include="Image\passwodandconfrompaasword.jpg" />
+    <Content Include="Image\pdficon.png" />
+    <Content Include="Image\stundet.jpeg" />
+    <Content Include="Image\TakeAttendance.png" />
+    <Content Include="Image\UserManagemnet.png" />
+    <Content Include="Javascript\Navigation.js" />
+    <Content Include="Javascript\SubmitExamConformation.js" />
+    <Content Include="KnowledgeRepository\AddCategory.aspx" />
+    <Content Include="KnowledgeRepository\CreateRepository.aspx" />
+    <Content Include="KnowledgeRepository\AllRepositories.aspx" />
+    <Content Include="KnowledgeRepository\FavoriteContent.aspx" />
+    <Content Include="KnowledgeRepository\ShowContent.aspx" />
+    <Content Include="LibraryManagement\AddBook.aspx" />
+    <Content Include="LibraryManagement\AvailableBook.aspx" />
+    <Content Include="LibraryManagement\BookTransaction.aspx" />
+    <Content Include="LibraryManagement\MypurchasedBook.aspx" />
+    <Content Include="LibraryManagement\RemoveBook.aspx" />
+    <Content Include="LibraryManagement\ReturnBook.aspx" />
+    <Content Include="OnlineExamination\CreateExam.aspx" />
+    <Content Include="OnlineExamination\CreateQuestion.aspx" />
+    <Content Include="OnlineExamination\ShowExam.aspx" />
+    <Content Include="OnlineExamination\SubmitExam.aspx" />
+    <Content Include="OnlineExamination\MyResult.aspx" />
+    <Content Include="Password\ForgotPassword.aspx" />
+    <Content Include="Authentication\Login.aspx" />
+    <Content Include="Password\UpdatePassword.aspx" />
+    <Content Include="Usermanagement\ClassUpdate.aspx" />
+    <Content Include="Usermanagement\DeActiveUser.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Usermanagement\AddClass.aspx.cs">
+      <DependentUpon>AddClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usermanagement\AddClass.aspx.designer.cs">
+      <DependentUpon>AddClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usermanagement\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usermanagement\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\Attendance.Master.cs">
+      <DependentUpon>Attendance.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\Attendance.Master.designer.cs">
+      <DependentUpon>Attendance.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\EditAttendance.aspx.cs">
+      <DependentUpon>EditAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\EditAttendance.aspx.designer.cs">
+      <DependentUpon>EditAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\TakeAttendance.aspx.cs">
+      <DependentUpon>TakeAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\TakeAttendance.aspx.designer.cs">
+      <DependentUpon>TakeAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\ViewAttendnace.aspx.cs">
+      <DependentUpon>ViewAttendnace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\ViewAttendnace.aspx.designer.cs">
+      <DependentUpon>ViewAttendnace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\ViewMyAttendance.aspx.cs">
+      <DependentUpon>ViewMyAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\ViewMyAttendance.aspx.designer.cs">
+      <DependentUpon>ViewMyAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\CommonMethod.cs" />
+    <Compile Include="Class\DB.cs" />
+    <Compile Include="Class\UserType.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KnowledgeRepository\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KnowledgeRepository\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KnowledgeRepository\CreateRepository.aspx.cs">
+      <DependentUpon>CreateRepository.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KnowledgeRepository\CreateRepository.aspx.designer.cs">
+      <DependentUpon>CreateRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KnowledgeRepository\FavoriteContent.aspx.cs">
+      <DependentUpon>FavoriteContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KnowledgeRepository\FavoriteContent.aspx.designer.cs">
+      <DependentUpon>FavoriteContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KnowledgeRepository\KnowledgeRepository.Master.cs">
+      <DependentUpon>KnowledgeRepository.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KnowledgeRepository\KnowledgeRepository.Master.designer.cs">
+      <DependentUpon>KnowledgeRepository.Master</DependentUpon>
+    </Compile>
+    <Compile Include="KnowledgeRepository\AllRepositories.aspx.cs">
+      <DependentUpon>AllRepositories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KnowledgeRepository\AllRepositories.aspx.designer.cs">
+      <DependentUpon>AllRepositories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KnowledgeRepository\ShowContent.aspx.cs">
+      <DependentUpon>ShowContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KnowledgeRepository\ShowContent.aspx.designer.cs">
+      <DependentUpon>ShowContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement\AddBook.aspx.cs">
+      <DependentUpon>AddBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibraryManagement\AddBook.aspx.designer.cs">
+      <DependentUpon>AddBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement\AvailableBook.aspx.cs">
+      <DependentUpon>AvailableBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibraryManagement\AvailableBook.aspx.designer.cs">
+      <DependentUpon>AvailableBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement\BookTransaction.aspx.cs">
+      <DependentUpon>BookTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibraryManagement\BookTransaction.aspx.designer.cs">
+      <DependentUpon>BookTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement\LibraryManagement.Master.cs">
+      <DependentUpon>LibraryManagement.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibraryManagement\LibraryManagement.Master.designer.cs">
+      <DependentUpon>LibraryManagement.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement\MypurchasedBook.aspx.cs">
+      <DependentUpon>MypurchasedBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibraryManagement\MypurchasedBook.aspx.designer.cs">
+      <DependentUpon>MypurchasedBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement\RemoveBook.aspx.cs">
+      <DependentUpon>RemoveBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibraryManagement\RemoveBook.aspx.designer.cs">
+      <DependentUpon>RemoveBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement\ReturnBook.aspx.cs">
+      <DependentUpon>ReturnBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibraryManagement\ReturnBook.aspx.designer.cs">
+      <DependentUpon>ReturnBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineExamination\CreateExam.aspx.cs">
+      <DependentUpon>CreateExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineExamination\CreateExam.aspx.designer.cs">
+      <DependentUpon>CreateExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineExamination\CreateQuestion.aspx.cs">
+      <DependentUpon>CreateQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineExamination\CreateQuestion.aspx.designer.cs">
+      <DependentUpon>CreateQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineExamination\OnlineExamination.Master.cs">
+      <DependentUpon>OnlineExamination.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineExamination\OnlineExamination.Master.designer.cs">
+      <DependentUpon>OnlineExamination.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineExamination\ShowExam.aspx.cs">
+      <DependentUpon>ShowExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineExamination\ShowExam.aspx.designer.cs">
+      <DependentUpon>ShowExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineExamination\SubmitExam.aspx.cs">
+      <DependentUpon>SubmitExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineExamination\SubmitExam.aspx.designer.cs">
+      <DependentUpon>SubmitExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineExamination\MyResult.aspx.cs">
+      <DependentUpon>MyResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineExamination\MyResult.aspx.designer.cs">
+      <DependentUpon>MyResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Authentication\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password\UpdatePassword.aspx.cs">
+      <DependentUpon>UpdatePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password\UpdatePassword.aspx.designer.cs">
+      <DependentUpon>UpdatePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usermanagement\ClassUpdate.aspx.cs">
+      <DependentUpon>ClassUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usermanagement\ClassUpdate.aspx.designer.cs">
+      <DependentUpon>ClassUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usermanagement\DeActiveUser.aspx.cs">
+      <DependentUpon>DeActiveUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usermanagement\DeActiveUser.aspx.designer.cs">
+      <DependentUpon>DeActiveUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usermanagement\Usermanagemnet.Master.cs">
+      <DependentUpon>Usermanagemnet.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usermanagement\Usermanagemnet.Master.designer.cs">
+      <DependentUpon>Usermanagemnet.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Attendance\Attendance.Master" />
+    <Content Include="LibraryManagement\LibraryManagement.Master" />
+    <Content Include="OnlineExamination\OnlineExamination.Master" />
+    <Content Include="KnowledgeRepository\KnowledgeRepository.Master" />
+    <None Include="packages.config" />
+    <Content Include="Usermanagement\Usermanagemnet.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58724</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44371/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.SDK.VsixSuppression.14.1.37\build\Microsoft.VisualStudio.SDK.VsixSuppression.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VisualStudio.SDK.VsixSuppression.14.1.37\build\Microsoft.VisualStudio.SDK.VsixSuppression.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.VisualStudio.SDK.VsixSuppression.14.1.37\build\Microsoft.VisualStudio.SDK.VsixSuppression.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.SDK.VsixSuppression.14.1.37\build\Microsoft.VisualStudio.SDK.VsixSuppression.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

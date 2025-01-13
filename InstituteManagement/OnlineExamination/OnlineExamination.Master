@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OnlineExamination.Master.cs" Inherits="InstituteManagement.OnlineExamination.OnlineExaminationMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #87CEEB;
+        }
+
+        .nav-links a {
+            color: #333;
+        }
+
+        .logo {
+            font-size: 32px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 1em;
+            font-size: 18px;
+        }
+
+            .nav-links li:hover {
+                background-color: lightcyan;
+                border-radius: 50px;
+                transition: 0.3s ease;
+            }
+
+            .nav-links li {
+                padding: 5px 14px;
+                position: relative;
+            }
+
+        .dropdown {
+            background-color: rgb(1, 139, 139);
+            padding: 1em 0;
+            position: absolute;
+            display: none;
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            width: 100%;
+        }
+
+            .dropdown li + li {
+                margin-top: 10px;
+            }
+
+            .dropdown li {
+                padding: 0.5em 1em;
+                text-align: center;
+            }
+
+                .dropdown li:hover {
+                    background-color: #4c9e9e;
+                }
+
+        .services:hover .dropdown {
+            display: block;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            user-select: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                background-color: #87CEEB;
+                right: 0;
+                left: 0;
+                text-align: center;
+                padding: 16px 0;
+            }
+
+                .nav-links li:hover {
+                    background-color: #4c9e9e;
+                    transition: 0.3s ease;
+                }
+
+                .nav-links li + li {
+                    margin-top: 12px;
+                }
+
+            #checkbox_toggle:checked ~ .menu {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .dropdown {
+                left: 0;
+                top: 100%;
+                width: 100%;
+                transform: none;
+            }
+
+                .dropdown li:hover {
+                    background-color: #4c9e9e;
+                }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar">
+            <div class="Home"><a href="../Home.aspx" runat="server">Home Page</a></div>
+            <ul class="nav-links">
+                <asp:CheckBox ID="checkbox_toggle" runat="server" />
+                <asp:Label ID="Label1" runat="server" Text="Label" class="hamburger">&#9776;</asp:Label>
+                <li><a href="CreateExam.aspx" runat="server">Create Exam</a></li>
+                <li><a href="CreateQuestion.aspx" runat="server">Create Question</a></li>
+                <li><a href="ShowExam.aspx" runat="server">Show Exam</a></li>
+                <li><a href="MyResult.aspx" runat="server">My Result</a></li>
+            </ul>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>
